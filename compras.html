@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras</title>
+    <style>
+         nav { /*Estilizando o menu*/
+            background-color: #b499ca;
+            position: fixed;
+            justify-content: space-between;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center; 
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 1000; /* fica sobre outros elementos */
+        }
+
+        nav a { /* links do menu */
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+    
+        nav a:hover { /* Efeito de passar o mouse */
+            color: #4C1E76;
+        }
+
+        .logo {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <img class="logo" src="img/Logo menu.png" height="50px">
+        </div>
+
+        <div>
+            <a href="principal.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="compras.html">Compras</a>
+        </div>
+  </nav>
+    
+</body>
+</html>

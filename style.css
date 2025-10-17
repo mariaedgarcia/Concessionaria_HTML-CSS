@@ -1,0 +1,114 @@
+body { /* Zerando as config */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider { /*Estilizando a classe slider */
+    margin: 0 auto; /*0 em cima e em baixo, e auto nas laterais para centralizar*/
+    width: 800px; /*largura fixa do carrosel*/
+    height: 400px; /*altura fixa*/
+    overflow: hidden;
+}
+
+.slides { /*Classe que tem os rádio buttons e as imagens*/
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input { /*Ocultando os inputs*/
+    display: none;
+}
+
+.slide { /*Classe que tem cada div e imagem*/
+    width: 25%; /*Da imagem com seu tamanho*/
+    transition: 2s;
+    position: relative;
+}
+
+.slide img{ /*Acessando cada imagem, fazendo ela se encaixar num tamanho */
+    width: 800px;
+    height: 400px;
+    object-fit: cover; /* mantém proporção e preenche */
+    object-position: center; /* centraliza a imagem */
+    display: block;
+    margin: 0 auto; /* centraliza na tela */
+}
+
+.navegacao-manual { /*Estilizando a classe navegacao-manual*/
+    position: absolute;
+    width: 800px;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white /*Cor da borda*/;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s; /*Efeito de transição do radio button*/
+}
+/*Na classe manual btt, menos no seu último item ele vai aplicar uma margem*/
+.manual-btn:not(:last-child) { 
+    margin-right: 30px;
+}
+
+.manual-btn:hover { /*quando passar o mouse em cima*/
+    background-color: white;
+}
+
+/*Manipulando pelo ID quando cada item estiver no estado de cheked*/
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -100%;
+}
+
+.auto-navegacao {
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.auto-navegacao div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .auto-navegacao .auto-btn1 {
+    background-color: white;
+}
+#radio2:checked ~ .auto-navegacao .auto-btn2 {
+    background-color: white;
+}
+#radio3:checked ~ .auto-navegacao .auto-btn3 {
+    background-color: white;
+}
+#radio4:checked ~ .auto-navegacao .auto-btn4 {
+    background-color: white;
+}
+#radio5:checked ~ .auto-navegacao .auto-btn5 {
+    background-color: white;
+}

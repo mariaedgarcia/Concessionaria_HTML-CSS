@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>principal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        nav { /*Estilizando o menu*/
+            background-color: #b499ca;
+            position: fixed;
+            justify-content: space-between;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center; 
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 1000; /* fica sobre outros elementos */
+        }
+
+        nav a { /* links do menu */
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+    
+        nav a:hover { /* Efeito de passar o mouse */
+            color: #4C1E76;
+        }
+
+        .logo { /*Para deixar os ícones do outro lado da logo*/
+            text-align: left;
+        }
+
+        .titulo { /*TENTANDO DEIXAR A MERDA DO TÍTULO EM CIMA DAS IMAGENS*/
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <div>
+            <img class="logo" src="img/Logo menu.png" height="50px">
+        </div>
+
+        <div>
+            <a href="principal.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="compras.html">Compras</a>
+        </div>
+    </nav>
+    <!-- Fim do menu de navegação -->
+
+    </header>
+    <!-- Fim do cabeçalho da página --> 
+    
+    <!-- Conteúdo da página-->
+    <main>
+        <div class="titulo">
+            <h1>Acelere com segurança e elegância</h1>
+        </div>
+
+        <!-- Começo da bomba -->
+        <div class="slider"> <!-- Vai ser o todo do carrosel-->
+
+            <div class="slides"> <!--Quais vão ser os slides-->
+                <!-- Fazendo os rádio buttons -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <!-- Fim dos rádio buttons -->
+
+                <!-- Imagens do slide -->
+                <div class="slide first">
+                    <img src="img/porsche.jpg" alt="Carro 1">
+                
+                </div>
+
+                <div class="slide">
+                    <img src="img/ferrari.jpg" alt="Carro 2">
+                </div>
+
+                <div class="slide">
+                    <img src="img/mercedes.jpg" alt="Carro 3">
+                </div>
+
+                <div class="slide">
+                    <img src="img/bmw.jpg" alt="Carro 4">
+                </div>
+
+                <div class="slide">
+                    <img src="img/byd.jpg" alt="Carro 5">
+                </div>
+                <!-- Fim das imagens do slide -->
+
+                <!-- Auto navegação (onde fica as bolinhasde navegação)-->
+                <div class="auto-navegacao">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                </div>
+                <!-- Fim da auto navegação -->
+
+            </div>
+
+            <div class="navegacao-manual"> <!-- Referenciando os labels com os input de rádio -->
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+            </div>
+
+        </div>
+        <!-- Fim dessa bomba do carrosel -->
+
+        <br>
+        <br>
+
+        <!-- Quadro de explicação-->
+        <fieldset style="background-color: #c2aed3; border-radius: 10px; width: 990px; margin: auto;">
+            <legend>Quem nós somos?</legend>
+            <div style="text-align: center;">
+                <h1>🌙 Eclipse Concessionária</h1>
+                <p>Seu próximo carro está aqui!<br>Na Eclipse Concessionária, você encontra os melhores veículos novos e seminovos com qualidade garantida, condições especiais e atendimento que entende o que você precisa.</p>
+                <p>Trabalhamos com as marcas mais desejadas do mercado e oferecemos carros revisados, prontos para te acompanhar em qualquer destino.<br>Aqui, cada detalhe é pensado para que você tenha segurança, conforto e estilo na hora de escolher seu veículo.</p>
+                <p>💡 Eclipse Concessionária — onde dirigir é viver novas experiências.</p>
+            </div>
+        </fieldset>
+        <!-- Fim do quadro de explicação-->
+
+    </main>
+    <!-- Fim do conteúdo da página-->
+
+    <br>
+    <br>
+
+    <!-- Rodapé da página-->
+    <footer style="background-color: #b499ca;">
+
+        <!--Primeiro bloco-->
+        <div>
+           <h1>Central de Atendimento:</h1>
+           <table>
+                <tr>
+                    <th>WhatsApp:</th>
+                    <th>(11) 98765-4321</th>
+                </tr>
+                <tr>
+                    <th>E-mail:</th>
+                    <th>contato@eclipseconcessionaria.com.br</th>
+                </tr>
+           </table>
+        </div>
+        <!--Fim do primeiro bloco-->
+
+        <!--Segundo bloco-->
+        <div>
+            <h1>Localização e Horário</h1>
+            <table>
+                <tr>
+                    <th>Nosso Endereço:</th>
+                    <th>Av. do Eclipse, 400 - Bairro das Estrelas - São Paulo/SP</th>
+                </tr>
+                <tr>
+                    <th>Atendimento de Vendas:</th>
+                    <th>Segunda a Sexta, das 8h às 18h</th>
+                </tr>
+                <tr>
+                    <th>Atendimento de Sábado:</th>
+                    <th>Sábados, das 9h às 13h</th>
+                </tr>
+            </table>
+        </div>
+        <!--Fim do segundo bloco-->
+
+        <!--Terceiro blobo-->
+        <div>
+            <h1>Institucional e Reforço da Marca</h1>
+            <table>
+                <tr>
+                    <th>Acelere com Elegância</th>
+                    <th>Na Eclipse Concessionária, cada detalhe é pensado para sua segurança, conforto e estilo.</th>
+                </tr>
+                <tr>
+                    <th>Direitos e Avisos</th>
+                    <th>© 2025 Eclipse Concessionária. Todos os direitos reservados.<br>Preços e condições sujeitos a confirmação e alterações.</th>
+                </tr>
+                <tr>
+                    <th>A Mensagem Eclipse</th>
+                    <th>Eclipse Concessionária — onde dirigir é viver novas experiências.</th>
+                </tr>
+                
+            </table>
+        </div>
+         <!--Fim do terceiro blobo-->
+
+    </footer>
+    <!-- Fim do rodapé da página-->
+
+
+  <script>
+    let count = 1;
+    document.getElementById("radio1").checked = true;
+
+    setInterval( function() {
+        nextImage();
+    }, 7000)
+
+    function nextImage() {
+        count++;
+        if(count>5){
+            count = 1;
+        }
+
+        document.getElementById("radio"+count).checked = true;
+    }
+
+  </script>
+ 
+</body>
+</html>

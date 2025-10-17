@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .layoutLogin{
+            background-color: white;
+            width: 500px; 
+            height: 660px; 
+            margin-top: 100px; 
+            margin-left: 680px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        nav { /*Estilizando o menu*/
+            background-color: #b499ca;
+            position: fixed;
+            justify-content: space-between;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center; 
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 1000; /* fica sobre outros elementos */
+        }
+
+        nav a { /* links do menu */
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+    
+        nav a:hover { /* Efeito de passar o mouse */
+            color: #4C1E76;
+        }
+
+        .logo {
+            text-align: left;
+        }
+
+    </style>
+
+</head>
+<body>
+
+  <nav>
+    <div>
+        <img class="logo" src="img/Logo menu.png" height="50px">
+    </div>
+
+    <div>
+        <a href="principal.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="compras.html">Compras</a>
+    </div>
+  </nav>
+
+    <form>
+        <fieldset class="layoutLogin">
+            <img src="img/Logo menu.png" width="200">
+            <h1>Cadastro</h1>
+
+            <table align="center" cellspacing="8">
+                    <tr>
+                        <td align="left"><label for="nomeCompleto">Nome Completo:</label><br>
+                        <input type="text" id="nomeCompleto" style="padding: 6px 15px; border-radius: 6px; width: 350px; height: 15px;"><br><br></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><label for="email">Email:</label><br>
+                        <input type="email" id="email" style="padding: 6px 15px; border-radius: 6px; width: 350px; height: 15px;"><br><br></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><label for="senha">Senha:</label><br>
+                        <input type="senha" id="senha" style="padding: 6px 15px; border-radius: 6px; width: 350px; height: 15px;"><br><br></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><label for="confSenha">Confirmar senha:</label><br>
+                        <input type="confSenha" id="confSenha" style="padding: 6px 15px; border-radius: 6px; width: 350px; height: 15px;"><br><br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                        <input type="submit" value="Cadastrar" style="padding: 6px 15px; border-radius: 6px; width: 150px; height: 30px;" >
+                        </td>
+                    </tr>
+                </table>
+
+        </fieldset>
+        <br><br>
+        <div style="text-align: center;">
+                    <p>Já tem uma conta?
+                        <a href="login.html">Fazer login</a>
+                    </p>
+                </div>
+
+    </form>
+
+</body>
+</html>
