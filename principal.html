@@ -41,6 +41,44 @@
             text-align: center;
         }
 
+        html, body { /*Rodapé*/
+        height: 100%;
+        margin: 0;
+        }
+
+        body {
+        display: flex;
+        flex-direction: column;
+        }
+
+        main {
+        flex: 1; /* faz o conteúdo ocupar o espaço restante */
+        }
+
+        footer { /*Rodapé*/
+        background-color: #c7aee0;
+        text-align: center;
+        padding: 10px;
+        }
+
+        .container-fieldset { /*Container*/
+        display: flex; 
+        align-items: center;     /* Alinha verticalmente */
+        gap: 20px;               /* Espaço entre imagem e texto */
+        border: 1px solid #ccc;
+        padding: 20px; 
+        }
+
+        .img-fieldset {
+        width: 700px; 
+        height: auto;
+        border-radius: 10px;
+        }
+
+        .texto-fieldset { /*Container*/
+        flex: 1;
+        font-size: larger;
+        }
 
     </style>
 </head>
@@ -66,97 +104,145 @@
     <!-- Fim do cabeçalho da página --> 
     
     <!-- Conteúdo da página-->
-    <main>
-        <div class="titulo">
-            <h1>Acelere com segurança e elegância</h1>
-        </div>
+    <section style="margin-top: 800px;">
+        <main>
+            <div class="titulo">
+                <h1>Acelere com segurança e elegância</h1>
+            </div>
 
-        <!-- Começo da bomba -->
-        <div class="slider"> <!-- Vai ser o todo do carrosel-->
+            <!-- Começo da bomba -->
+            <div class="slider"> <!-- Vai ser o todo do carrosel-->
 
-            <div class="slides"> <!--Quais vão ser os slides-->
-                <!-- Fazendo os rádio buttons -->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-                <input type="radio" name="radio-btn" id="radio5">
-                <!-- Fim dos rádio buttons -->
+                <div class="slides"> <!--Quais vão ser os slides-->
+                    <!-- Fazendo os rádio buttons -->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+                    <!-- Fim dos rádio buttons -->
 
-                <!-- Imagens do slide -->
-                <div class="slide first">
-                    <img src="img/porsche.jpg" alt="Carro 1">
+                    <!-- Imagens do slide -->
+                    <div class="slide first">
+                        <img src="img/porsche.jpg" alt="Carro 1">
                 
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/ferrari.jpg" alt="Carro 2">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/mercedes.jpg" alt="Carro 3">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/bmw.jpg" alt="Carro 4">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/byd.jpg" alt="Carro 5">
+                    </div>
+                    <!-- Fim das imagens do slide -->
+
+                    <!-- Auto navegação (onde fica as bolinhasde navegação)-->
+                    <div class="auto-navegacao">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                        <div class="auto-btn5"></div>
+                    </div>
+                    <!-- Fim da auto navegação -->
+
                 </div>
 
-                <div class="slide">
-                    <img src="img/ferrari.jpg" alt="Carro 2">
+                <div class="navegacao-manual"> <!-- Referenciando os labels com os input de rádio -->
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio5" class="manual-btn"></label>
                 </div>
-
-                <div class="slide">
-                    <img src="img/mercedes.jpg" alt="Carro 3">
-                </div>
-
-                <div class="slide">
-                    <img src="img/bmw.jpg" alt="Carro 4">
-                </div>
-
-                <div class="slide">
-                    <img src="img/byd.jpg" alt="Carro 5">
-                </div>
-                <!-- Fim das imagens do slide -->
-
-                <!-- Auto navegação (onde fica as bolinhasde navegação)-->
-                <div class="auto-navegacao">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                    <div class="auto-btn5"></div>
-                </div>
-                <!-- Fim da auto navegação -->
 
             </div>
+            <!-- Fim dessa bomba do carrosel -->
 
-            <div class="navegacao-manual"> <!-- Referenciando os labels com os input de rádio -->
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-                <label for="radio5" class="manual-btn"></label>
-            </div>
-
-        </div>
-        <!-- Fim dessa bomba do carrosel -->
-
-        <br>
-        <br>
-
-        <!-- Quadro de explicação-->
-        <fieldset style="background-color: #c2aed3; border-radius: 10px; width: 990px; margin: auto;">
-            <legend>Quem nós somos?</legend>
-            <div style="text-align: center;">
-                <h1>🌙 Eclipse Concessionária</h1>
-                <p>Seu próximo carro está aqui!<br>Na Eclipse Concessionária, você encontra os melhores veículos novos e seminovos com qualidade garantida, condições especiais e atendimento que entende o que você precisa.</p>
-                <p>Trabalhamos com as marcas mais desejadas do mercado e oferecemos carros revisados, prontos para te acompanhar em qualquer destino.<br>Aqui, cada detalhe é pensado para que você tenha segurança, conforto e estilo na hora de escolher seu veículo.</p>
-                <p>💡 Eclipse Concessionária — onde dirigir é viver novas experiências.</p>
-            </div>
-        </fieldset>
-        <!-- Fim do quadro de explicação-->
-
-    </main>
+            </main>
+    </section>
     <!-- Fim do conteúdo da página-->
 
     <br>
     <br>
 
-    <!-- Rodapé da página-->
-    <footer style="background-color: #b499ca;">
+    <section>
+        <main>
+            <!-- Quadro de explicação-->
+            <fieldset style="background-color: #c2aed3; border-radius: 10px; width: 990px; margin: auto;">
+                <legend>Quem nós somos?</legend>
+                <div style="text-align: center;">
+                    <h1>🌙 Eclipse Concessionária</h1>
+                    <p>Seu próximo carro está aqui!<br>Na Eclipse Concessionária, você encontra os melhores veículos novos e seminovos com qualidade garantida, condições especiais e atendimento que entende o que você precisa.</p>
+                    <p>Trabalhamos com as marcas mais desejadas do mercado e oferecemos carros revisados, prontos para te acompanhar em qualquer destino.<br>Aqui, cada detalhe é pensado para que você tenha segurança, conforto e estilo na hora de escolher seu veículo.</p>
+                    <p>💡 Eclipse Concessionária — onde dirigir é viver novas experiências.</p>
+                </div>
+            </fieldset>
+            <!-- Fim do quadro de explicação-->
+        </main>
+    </section>
 
-        <!--Primeiro bloco-->
-        <div>
-           <h1>Central de Atendimento:</h1>
-           <table>
+    <br>
+    <br>
+
+    <!-- Início de uma seção -->
+    <section>
+        <main>
+            <div>
+                <fieldset class="container-fieldset">
+                    <img src="img/equipe.jpg" class="img-fieldset">
+                    <div class="texto-fieldset">
+                        <h1>Destaque de confiança e experiência:</h1>
+                        <p>Há mais de 10 anos, a Eclipse Concessionária vem conectando pessoas ao carro dos seus sonhos. Com atendimento personalizado, equipe especializada e condições exclusivas, garantimos uma experiência de compra segura, transparente e totalmente voltada para você. Aqui, cada detalhe importa: desde a escolha do veículo até o pós-venda, estamos ao seu lado para que você saia dirigindo com total confiança e satisfação.</p>
+                    </div>
+                </fieldset>
+            </div>
+        </main>
+    <!-- Fim de uma seção -->
+    </section>
+
+    <br>
+    <br>
+
+    <section>
+        <main>
+            <h1 style="text-align: center;">É a sua oportunidade! Não vai ficar de fora, né?!</h1>
+            <div class="carousel-carrosel-slide"> <!-- Carrosel de slides -->
+                <div class="carrosel-slides" id="slides">
+                <div class="carrosel-slide"><img src="img/mustang.jpg" alt="mustang"></div>
+                <div class="carrosel-slide"><img src="img/audi r8.jpg" alt="audi r8"></div>
+                <div class="carrosel-slide"><img src="img/civic.jpg" alt="civic"></div>
+                <div class="carrosel-slide"><img src="img/camaro.jpg" alt="camaro"></div>
+                <div class="carrosel-slide"><img src="img/corvette.jpg" alt="corvette"></div>
+                <div class="carrosel-slide"><img src="img/supra.jpeg" alt="supra"></div>
+                <div class="carrosel-slide"><img src="img/mini cooper.jpg" alt="mini cooper"></div>
+            </div>
+            <button class="prev" onclick="prevSlide()">❮</button>
+            <button class="next" onclick="nextSlide()">❯</button>
+            <!-- Fim do Carrosel de slides -->
+            </div>
+        </main>
+    </section>
+
+    <br>
+    <br>
+
+    <!-- Rodapé da página -->
+    <footer style="background-color: #b99fcf; width: 100%; display: flex; justify-content: center; gap: 50px; padding: 30px 0;">
+
+        <!-- Primeiro bloco -->
+        <div style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 500px;">
+                <h1 style="text-align: center;">Central de Atendimento:</h1>
+            <table style="width: 100%; border-collapse: collapse;">
                 <tr>
                     <th>WhatsApp:</th>
                     <th>(11) 98765-4321</th>
@@ -165,14 +251,14 @@
                     <th>E-mail:</th>
                     <th>contato@eclipseconcessionaria.com.br</th>
                 </tr>
-           </table>
+            </table>
+        <!-- Fim do Primeiro bloco -->
         </div>
-        <!--Fim do primeiro bloco-->
 
-        <!--Segundo bloco-->
-        <div>
-            <h1>Localização e Horário</h1>
-            <table>
+        <!-- Segundo bloco -->
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: left; width: 500px;">
+            <h1 style="text-align: center;">Localização e Horário</h1>
+            <table style="width: 100%; border-collapse: collapse;">
                 <tr>
                     <th>Nosso Endereço:</th>
                     <th>Av. do Eclipse, 400 - Bairro das Estrelas - São Paulo/SP</th>
@@ -186,13 +272,13 @@
                     <th>Sábados, das 9h às 13h</th>
                 </tr>
             </table>
+         <!-- Fim do Segundo bloco -->
         </div>
-        <!--Fim do segundo bloco-->
 
-        <!--Terceiro blobo-->
-        <div>
-            <h1>Institucional e Reforço da Marca</h1>
-            <table>
+        <!-- Terceiro bloco -->
+        <div style="display: flex; flex-direction: column; align-items: flex-end; text-align: left; width: 500px;">
+            <h1 style="text-align: center;">Institucional e Reforço da Marca</h1>
+            <table style="width: 100%; border-collapse: collapse;">
                 <tr>
                     <th>Acelere com Elegância</th>
                     <th>Na Eclipse Concessionária, cada detalhe é pensado para sua segurança, conforto e estilo.</th>
@@ -205,16 +291,15 @@
                     <th>A Mensagem Eclipse</th>
                     <th>Eclipse Concessionária — onde dirigir é viver novas experiências.</th>
                 </tr>
-                
             </table>
+        <!-- Fim do Terceiro bloco -->
         </div>
-         <!--Fim do terceiro blobo-->
 
+    <!-- Fim do rodapé da página -->
     </footer>
-    <!-- Fim do rodapé da página-->
-
 
   <script>
+    // Script do carrosel automático
     let count = 1;
     document.getElementById("radio1").checked = true;
 
@@ -231,6 +316,24 @@
         document.getElementById("radio"+count).checked = true;
     }
 
+    // Script do carrosel de slides
+    let currentIndex = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+ 
+    function showSlide(index) {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+ 
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+ 
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    }
   </script>
  
 </body>
