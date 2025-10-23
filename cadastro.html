@@ -75,41 +75,52 @@
             <h1>Cadastro</h1>
 
             <table align="center" cellspacing="8">
-                    <tr>
-                        <td align="left"><label for="nomeCompleto">Nome Completo:</label><br>
-                        <input type="text" id="nomeCompleto" style="padding: 6px 15px; border-radius: 6px; width: 350px; height: 15px;"><br><br></td>
-                    </tr>
-                    <tr>
-                        <td align="left"><label for="email">Email:</label><br>
-                        <input type="email" id="email" style="padding: 6px 15px; border-radius: 6px; width: 350px; height: 15px;"><br><br></td>
-                    </tr>
-                    <tr>
-                        <td align="left"><label for="senha">Senha:</label><br>
-                        <input type="senha" id="senha" style="padding: 6px 15px; border-radius: 6px; width: 350px; height: 15px;"><br><br></td>
-                    </tr>
-                    <tr>
-                        <td align="left"><label for="confSenha">Confirmar senha:</label><br>
-                        <input type="confSenha" id="confSenha" style="padding: 6px 15px; border-radius: 6px; width: 350px; height: 15px;"><br><br></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" align="center">
-                        <input type="submit" value="Cadastrar" style="padding: 6px 15px; border-radius: 6px; width: 150px; height: 30px;" >
-                        
-                        <span id="msgCadastro"></span>
-                        <!--kkkkkkkkkkkkkk-->
-                        </td>
-                    </tr>
-                </table>
+                <tr>
+                    <td align="left">
+                        <label for="nomeCompleto">Nome Completo:</label><br>
+                        <input type="text" id="nomeCompleto" style="padding: 6px 15px; border-radius: 6px; width: 350px; height: 15px;"><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" style="padding: 6px 15px; border-radius: 6px; width: 350px; height: 15px;"><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <label for="senha">Senha:</label><br>
+                        <input type="password" id="senha" style="padding: 6px 15px; border-radius: 6px; width: 350px; height: 15px;"><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <label for="confSenha">Confirmar senha:</label><br>
+                        <input type="password" id="confSenha" style="padding: 6px 15px; border-radius: 6px; width: 350px; height: 15px;"><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="button" value="Cadastrar" style="padding: 6px 15px; border-radius: 6px; width: 150px; height: 30px;" onclick="mensagem()">
+                    </td>
+                </tr>
+            </table>
 
         </fieldset>
-        <br><br>
+        <br>
+        <br>
         <div style="text-align: center;">
-                    <p>Já tem uma conta?
-                        <a href="login.html">Fazer login</a>
-                    </p>
-                </div>
-
+            <p>Já tem uma conta?
+                <a href="login.html">Fazer login</a>
+            </p>
+        </div>
     </form>
+
+    <script>
+        function mensagem(){
+            alert('Cadastro realizado com sucesso!');
+        }
+    </script>
 
 </body>
 </html>
