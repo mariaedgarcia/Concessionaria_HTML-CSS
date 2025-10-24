@@ -118,8 +118,17 @@
 
     <script>
         function mensagem(){
-            alert('Cadastro realizado com sucesso!');
+            let senha = document.querySelector('#senha').value;
+            let confSenha = document.querySelector('#confSenha').value;
+
+            // Tentando achar a lógica
+            if (senha !== confSenha){
+                alert('Erro na confirmação de senha');
+            } else {
+                alert('Cadastro realizado com sucesso!');
+            }  
         }
+        
     </script>
 
 </body>
